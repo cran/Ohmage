@@ -1,10 +1,10 @@
-f6ff74cd9db08d14c9348c4fbfd58c2a *DESCRIPTION
-1f7024143f5fc7ba1ad31ebd9983632f *NAMESPACE
+cc220756b371aaa0e3f78b5d4180e7bd *DESCRIPTION
+00d93d22416afcbe673655eb3370ee27 *NAMESPACE
 21a4ff45e8529c76d102528ffa6782b4 *R/increment.curlcount.R
-31d45297eab3fdedaab39f5632b0cb55 *R/loadtest.R
+4c5e06ca8d83ca63f4f698e1e7c7050e *R/loadtest.R
 cc9194fa5cf2711077527a804cba3a8f *R/multifactor.R
 703a84a1255ccd42ce281242be559611 *R/oh.auth_token.R
-88d19663217cf4b68f10c5ed6d39bcc7 *R/oh.call.R
+ad890a827185bde7e9c49ab463c5db3d *R/oh.call.R
 e8262919bee63d019730317cf711ae61 *R/oh.campaign.create.R
 04a6d860258f538b0f5b644011ebf13c *R/oh.campaign.delete.R
 8748706da47c980aee9fb8635c5ce5bd *R/oh.campaign.read.R
@@ -17,6 +17,7 @@ f68c510318a7bc01704242c4ad7417f1 *R/oh.class.update.R
 0eefb9e551377c16b0dee8a1e3887ad8 *R/oh.logout.R
 394d58a8f28bfcb0f53b266027dfb539 *R/oh.survey.upload.R
 84e14741ae4e80e5db3b32fc1e186021 *R/oh.survey_response.read.R
+7ab796ab32cb5731be56f61fb5a42b5f *R/oh.survey_response.update.R
 8e7ea3c1c1280ca2fce34da95cb3c7f0 *R/oh.user.auth.R
 c73b6cc5b2557540ca1674d717d56cad *R/oh.user.create.R
 aa86c1187d3d9a0ce5085719cb807451 *R/oh.user.delete.R
@@ -32,13 +33,14 @@ f6146a3302ad07d1566733e24e675860 *R/renewCurl.R
 827e8173bfada9be1f500d74e9a4c592 *examples/example.R
 f1259894420039fc78035dd9a629cfa8 *inst/files/advertisement.xml
 ee3a0f1b5c98328b3f5e142bc8b7f0f4 *inst/files/andwellness-survey-generator-2.9.jar
+8e614e66ca897fa0107750e1bda4430c *inst/files/jeroen.xml
 296ee04a107a82040097b9e397e13df2 *inst/files/josh.xml
 e41bb9ce411f3efbdfee4b9e54a491e2 *inst/files/lolcat.jpg
 41ad011b92ef9ab4fccd0e721956c37f *inst/files/photosnack.xml
 39db6cf947e828da9c5c2d5003c6c6b4 *inst/files/sleep.xml
 56bd07834c2cf6695d2f9b783620d7cc *inst/files/snack.xml
-f5b608cca8ad609c8c8a280945160db9 *man/loadtest.Rd
-e904e9019a30308cb3ed7de3a4b8e0ba *man/loadtest.wipe.Rd
+d810b40fa6a1f6f03a8bb180b94d4850 *man/loadtest.Rd
+6b27da22be79f91ccecc12f33204a2a2 *man/loadtest.wipe.Rd
 bcc9266685994d8481b680555adf6dbc *man/multifactor.Rd
 23c8d35a86bbfcadc36ee65e3cae04a2 *man/oh.campaign.create.Rd
 e2ca1099123ee072b78d2a637f9c6e63 *man/oh.campaign.delete.Rd
@@ -52,6 +54,7 @@ f5cea4579e9440011d78ee978b217ef1 *man/oh.class.update.Rd
 65f9d960565fa1e2142450de131249b5 *man/oh.logout.Rd
 8981401d57daac9b3741d54bd608278b *man/oh.survey.upload.Rd
 ee117e7a885470297ba4cfb2d3445d9d *man/oh.survey_response.read.Rd
+3b312b3cc47e1435e5bbd3b16e9234a5 *man/oh.survey_response.update.Rd
 1ed11455eff0f13352cc5ed94a0628e3 *man/oh.user.auth.Rd
 16591e96499e28dd8168c56fee61a07f *man/oh.user.create.Rd
 6e6527382dcdb7c1ccf63649b7cbe748 *man/oh.user.delete.Rd

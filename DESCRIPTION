@@ -1,7 +1,7 @@
 Package: Ohmage
 Type: Package
 Title: R Client for Mobilize/Andwellness server
-Version: 2.9
+Version: 2.9-1
 Date: 2011-09-28
 Author: Jeroen Ooms
 Maintainer: Jeroen Ooms <jeroen.ooms@stat.ucla.edu>
@@ -18,6 +18,7 @@ Collate: 'increment.curlcount.R' 'loadtest.R' 'multifactor.R'
         'oh.user.delete.R' 'oh.user.read.R' 'oh.user_stat.read.R'
         'parse.date.R' 'parse.item.R' 'parse.prompt.R' 'parsevector.R'
         'print.param.list.R' 'renewCurl.R' 'oh.logout.R' 'onAttach.R'
-Packaged: 2011-12-27 06:26:32 UTC; jeroen
+        'oh.survey_response.update.R'
+Packaged: 2011-12-31 04:09:01 UTC; jeroen
 Repository: CRAN
-Date/Publication: 2011-12-27 10:05:52
+Date/Publication: 2012-01-03 11:44:45
