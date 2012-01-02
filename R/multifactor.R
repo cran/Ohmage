@@ -13,9 +13,16 @@
 #' @aliases as.vector.multifactor expand.multifactor dim.multifactor is.multifactor as.vector.multifactor rep.multifactor [.multifactor [[.multifactor
 #' @export
 multifactor <- function(values, levels = unique(unlist(values)), labels=levels, ordered=TRUE){
-	newvalues <- sapply(values, paste, collapse="+");
+	
+	if(!all(unlist(values) %in% levels)){
+		stop("Some values were not found in 'levels' at multifactor conversion.")
+	}
+	newvalues <- sapply(values, match, levels);
+	newvalues <- sapply(newvalues, paste, collapse="+");
 	newvalues[is.na(values)] <- NA;
-	attr(newvalues, "levels") <- levels;
+	newlevels <- 1:length(levels);
+	
+	attr(newvalues, "levels") <- newlevels;
 	attr(newvalues, "labels") <- labels;
 	attr(newvalues, "ordered") <- ordered;
 	class(newvalues) <- c("multifactor", "character");
