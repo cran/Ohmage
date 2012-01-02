@@ -7,13 +7,13 @@ enquote <- function(string){
   return(paste('"', string, '"', sep=""));
 }
 
-setXmlValues <- function(xmlfile, n.users){
+setXmlValues <- function(xmlfile, n.users, prefix="loadtest"){
 	xmldoc <- xmlParse(xmlfile);
 	urnnode <- getNodeSet(xmldoc, "/campaign/campaignUrn")[[1]];
 	namenode <- getNodeSet(xmldoc, "/campaign/campaignName")[[1]];
 	oldname <- xmlValue(namenode);
-	xmlValue(urnnode) <- paste("urn:campaign:loadtest", oldname, n.users, sep=":");
-	xmlValue(namenode) <- paste("loadtest", oldname, n.users, sep=".");
+	xmlValue(urnnode) <- paste("urn:campaign", prefix, oldname, n.users, sep=":");
+	xmlValue(namenode) <- paste(prefix, oldname, n.users, sep=".");
 	newfile <- tempfile();
 	saveXML(xmldoc, newfile);
 	attr(newfile, "oldname") <- oldname;
@@ -72,24 +72,33 @@ numtolet <- function(number, numlength=6){
 #' @param recycle if https connection should be kept alive (recommended)
 #' @param verbose verbose output
 #' @param shareall should data be shared? T/F
+#' @param user.prefix prefix used for campaign and user names.
 #' @export
-loadtest <- function(n.users = 10, n.days=5, n.responses=2, xmlfile = system.file(package="Ohmage", "files/jeroen.xml"), recycle=TRUE, verbose=FALSE, shareall=TRUE){
+loadtest <- function(n.users = 10, n.days=5, n.responses=2, xmlfile = system.file(package="Ohmage", "files/jeroen.xml"), recycle=TRUE, verbose=FALSE, shareall=TRUE, user.prefix="loadtest"){
 	
 	#load xml package
 	library(XML);
 	
 	#check for java
 	if(system('java', ignore.stdout=TRUE, ignore.stderr=TRUE) != 0){
-      stop("java was not found");
-    }
-	
+    stop("java was not found");
+  }
+
 	#statics
 	class_urn <- "urn:class:loadtest";
 	password <- "Test.123";
-	user.prefix <- "loadtest"
 	datagenjar <- system.file(package="Ohmage", "files/andwellness-survey-generator-2.9.jar");
 	ohmage_username <- getOption("ohmage_username")
-	jsonfile <- gsub("Rtmp.*", "datagen.json", tempdir()); # "/tmp/datagen.json"
+	
+	#jsonfile <- gsub("Rtmp.*", "datagen.json", tempdir()); # "/tmp/datagen.json"
+	jsonfile <- path.expand("~/.datagen.json");
+
+	#remove old file
+	if(file.exists(jsonfile)){
+		if(!file.remove(jsonfile)){
+			stop("Could not write edit tempfile. Please manually delete: ", jsonfile);
+		}
+	}	
 	
 	#new xml file
 	myxmlfile <- tempfile();
@@ -103,7 +112,7 @@ loadtest <- function(n.users = 10, n.days=5, n.responses=2, xmlfile = system.fil
 		stop("xmlfile argument needs to be xml string or a filename.")
 	}
 	
-	myxmlfile <- setXmlValues(myxmlfile, n.users);
+	myxmlfile <- setXmlValues(myxmlfile, n.users, user.prefix);
 
 	#parse xml
 	oldname <- attr(myxmlfile, "oldname")
@@ -171,11 +180,12 @@ loadtest <- function(n.users = 10, n.days=5, n.responses=2, xmlfile = system.fil
 #' @param n.users number of users that was generated
 #' @param xmlfile path or string of orriginal xml 
 #' @param recycle to recycle the connection
+#' @param user.prefix a character string used in the usernames and campaign name. Make it short. 
 #' @export
-loadtest.wipe <- function(n.users = 10, xmlfile = system.file(package="Ohmage", "files/jeroen.xml"), recycle=TRUE){
+loadtest.wipe <- function(n.users = 10, xmlfile = system.file(package="Ohmage", "files/jeroen.xml"), recycle=TRUE, user.prefix = "loadtest"){
 	
-	#statics
-	user.prefix <- "loadtest"
+	#load xml package
+	library(XML);	
 	
 	#new xml file
 	myxmlfile <- tempfile();
@@ -189,7 +199,7 @@ loadtest.wipe <- function(n.users = 10, xmlfile = system.file(package="Ohmage", 
 		stop("xmlfile argument needs to be xml string or a filename.")
 	}
 	
-	myxmlfile <- setXmlValues(myxmlfile, n.users);
+	myxmlfile <- setXmlValues(myxmlfile, n.users, user.prefix);
 	
 	#parse xml
 	oldname <- attr(myxmlfile, "oldname")

@@ -4,7 +4,8 @@
 \usage{
   loadtest(n.users = 10, n.days = 5, n.responses = 2,
     xmlfile = system.file(package = "Ohmage", "files/jeroen.xml"),
-    recycle = TRUE, verbose = FALSE, shareall = TRUE)
+    recycle = TRUE, verbose = FALSE, shareall = TRUE,
+    user.prefix = "loadtest")
 }
 \arguments{
   \item{n.users}{number of users to generate}
@@ -21,6 +22,9 @@
   \item{verbose}{verbose output}
 
   \item{shareall}{should data be shared? T/F}
+
+  \item{user.prefix}{prefix used for campaign and user
+  names.}
 }
 \description{
   Data generations for loadtesting
