@@ -75,6 +75,9 @@ numtolet <- function(number, numlength=6){
 #' @export
 loadtest <- function(n.users = 10, n.days=5, n.responses=2, xmlfile = system.file(package="Ohmage", "files/jeroen.xml"), recycle=TRUE, verbose=FALSE, shareall=TRUE){
 	
+	#load xml package
+	library(XML);
+	
 	#check for java
 	if(system('java', ignore.stdout=TRUE, ignore.stderr=TRUE) != 0){
       stop("java was not found");
