@@ -17,6 +17,11 @@ multifactor <- function(values, levels = unique(unlist(values)), labels=levels, 
 	if(!all(na.omit(unlist(values)) %in% levels)){
 		stop("Some values were not found in 'levels' at multifactor conversion.")
 	}
+	
+	if(length(labels) != length(unique(labels))){
+		warning("It seems like your multifactor as duplicate levels. That's not good:", paste(names(which(table(labels) > 1)), collapse=", "));
+	}
+	
 	newvalues <- sapply(values, match, levels);
 	newvalues <- sapply(newvalues, paste, collapse="+");
 	newvalues[is.na(values)] <- NA;
