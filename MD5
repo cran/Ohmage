@@ -1,11 +1,11 @@
-affd0621aa455a9f4d282119eda9e685 *DESCRIPTION
+e076fe74f87c7872233889ae570bb653 *DESCRIPTION
 eb1d9857678bd463d5d8daa35ee338b1 *NAMESPACE
 4a0d820e62a8072bfd696e0edd168af8 *R/benchmark.R
 21a4ff45e8529c76d102528ffa6782b4 *R/increment.curlcount.R
 f2648eb75bbd7fe6eecc08cc7b95ce5e *R/loadtest.R
-84f43bebe2896110da5acdacc0354442 *R/multifactor.R
+fc51354aaf9599f29f125262fd00da33 *R/multifactor.R
 703a84a1255ccd42ce281242be559611 *R/oh.auth_token.R
-5e951644060eed5a362b70ec3671dd1e *R/oh.call.R
+a0c1185b2546f47614c084d13ef8cb71 *R/oh.call.R
 e8262919bee63d019730317cf711ae61 *R/oh.campaign.create.R
 04a6d860258f538b0f5b644011ebf13c *R/oh.campaign.delete.R
 8748706da47c980aee9fb8635c5ce5bd *R/oh.campaign.read.R
@@ -65,7 +65,8 @@ ee117e7a885470297ba4cfb2d3445d9d *man/oh.survey_response.read.Rd
 16591e96499e28dd8168c56fee61a07f *man/oh.user.create.Rd
 6e6527382dcdb7c1ccf63649b7cbe748 *man/oh.user.delete.Rd
 892dee34b726409577f6d4468dbe5f49 *man/oh.user.read.Rd
-ff72c79469b695b3e0885223781a88dc *test/datagen.R
+046d7b9f07e98fde90cd44da231e890f *test/benchmark.R
+a3407633801a95b8db0e43a085de8695 *test/datagen.R
 e7daf864c4bc3b8120dcee86e8a99738 *test/test29.R
 c069c26eecc5334d2e26a03ef8921728 *test/testclient.R
 9a36978654027be09574f86a3d13d12b *test/userplots.R

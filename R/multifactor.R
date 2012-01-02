@@ -14,7 +14,7 @@
 #' @export
 multifactor <- function(values, levels = unique(unlist(values)), labels=levels, ordered=TRUE){
 	
-	if(!all(unlist(values) %in% levels)){
+	if(!all(na.omit(unlist(values)) %in% levels)){
 		stop("Some values were not found in 'levels' at multifactor conversion.")
 	}
 	newvalues <- sapply(values, match, levels);
