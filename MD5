@@ -1,8 +1,8 @@
-96483b0858f56b133586bb74f2a690f2 *DESCRIPTION
-0d7e708ac914169929799c52fa76372a *NAMESPACE
+b7c1873c0b80e8198886a79d4bc29756 *DESCRIPTION
+3940ef2596904656c56cd350b6014a40 *NAMESPACE
 21a4ff45e8529c76d102528ffa6782b4 *R/increment.curlcount.R
 6edc1ab0b0cc07a9dfd4b30044a6bb82 *R/loadtest.R
-444944f2c3fa8a3462d2be474e80304a *R/multifactor.R
+cafbdeeab042df0cdefc608446fad9ea *R/multifactor.R
 703a84a1255ccd42ce281242be559611 *R/oh.auth_token.R
 47e65c20037df908081d85b6a8e233a4 *R/oh.call.R
 e8262919bee63d019730317cf711ae61 *R/oh.campaign.create.R
@@ -15,7 +15,7 @@ f68c510318a7bc01704242c4ad7417f1 *R/oh.class.update.R
 47b3b9911a39dcf0ee39ba84db30e71c *R/oh.image.read.R
 6fa47f2c5c2788d9ec4857aae07184bc *R/oh.login.R
 0eefb9e551377c16b0dee8a1e3887ad8 *R/oh.logout.R
-e70a9e0720845893e29b1d990a6f23c6 *R/oh.mobility.read.R
+871f7477747d5843d2acade4f9ecb053 *R/oh.mobility.read.R
 394d58a8f28bfcb0f53b266027dfb539 *R/oh.survey.upload.R
 bac7e234415dad7934e06434c7b10e33 *R/oh.survey_response.function.read.R
 c0460cdb849c8bcbcda8d4276a7d977d *R/oh.survey_response.read.R
@@ -31,6 +31,7 @@ d95ac44909a5080012c790df00771ee6 *R/onLoad.R
 bb8e0f1d05b07719115854ad1dc88bcf *R/parse.prompt.R
 68da2def10c0fe7d31855620418efce7 *R/parsevector.R
 4b105f1ec30570852dfc5cfc4dc54762 *R/print.param.list.R
+d79c385d26a733232926c4e80fd17c26 *R/records2df.R
 f6146a3302ad07d1566733e24e675860 *R/renewCurl.R
 cb9f6d7f42bec02dd99dd6124da7ad03 *R/today.R
 827e8173bfada9be1f500d74e9a4c592 *examples/example.R
@@ -45,7 +46,7 @@ e41bb9ce411f3efbdfee4b9e54a491e2 *inst/files/lolcat.jpg
 56bd07834c2cf6695d2f9b783620d7cc *inst/files/snack.xml
 1ebb01d6b8bfe27cb9989c340215dc32 *man/loadtest.Rd
 949cd7b929c397dcb2e6db3fa25ad3d2 *man/loadtest.wipe.Rd
-bcc9266685994d8481b680555adf6dbc *man/multifactor.Rd
+49af32dbeb7b3031e561cb9be6bedf48 *man/multifactor.Rd
 23c8d35a86bbfcadc36ee65e3cae04a2 *man/oh.campaign.create.Rd
 e2ca1099123ee072b78d2a637f9c6e63 *man/oh.campaign.delete.Rd
 0f24a21f73278941e0d63117e100f08e *man/oh.campaign.read.Rd
