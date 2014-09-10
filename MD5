@@ -1,13 +1,13 @@
-2cb6c121892ae4b5955ff3fbb62f3a4c *DESCRIPTION
+1b9130549e6b89373319ee7857f44950 *DESCRIPTION
 d0d5fd541b8e7d0dbabb489bf13f242f *NAMESPACE
 3a90a92167ebf99eef097a9ea8d72ef7 *R/increment.curlcount.R
-f76718e20fe2147a2f74fa053baed6d3 *R/loadtest.R
+3f5b10d996b8dc8ca656e2234386f22b *R/loadtest.R
 c9f89c40b1c296f62e87a8e09003aca1 *R/multifactor.R
 aee874590e963089716696798f5c6f84 *R/oh.auth_token.R
 6c474a64745ef9d1ef692be113942423 *R/oh.call.R
 785339860d5aca42c413fb4a4c4ff844 *R/oh.campaign.create.R
 58909d609ccdd1c30da6c97ad6a98987 *R/oh.campaign.delete.R
-2dd72751f8dcb91ee4b8af929b787fbc *R/oh.campaign.read.R
+60ca7703b8aae75e662badbc3fd92c57 *R/oh.campaign.read.R
 f1c81ea4ab973b28359faac0834376b6 *R/oh.class.create.R
 a2505004d5bb5b83d96a795cccedfcd5 *R/oh.class.delete.R
 04a14fb6af8fe0c44096ccf8b6c99434 *R/oh.class.read.R
@@ -34,7 +34,6 @@ ddced4a27a0c510c6b5d0ae77978dcc4 *R/print.param.list.R
 19421f7fc141df8c6cec16167c288e48 *R/renewCurl.R
 cb9f6d7f42bec02dd99dd6124da7ad03 *R/today.R
 f1259894420039fc78035dd9a629cfa8 *inst/files/advertisement.xml
-ca296c2f16934b0f411fb1ccd7287f04 *inst/files/andwellness-survey-generator-2.11.jar
 8e614e66ca897fa0107750e1bda4430c *inst/files/jeroen-nophoto.xml
 b38acb2e7703678d5e75fd7c3bd7d15e *inst/files/jeroen.xml
 520fa25d0d27057ebde05959aebeef8b *inst/files/josh.xml
